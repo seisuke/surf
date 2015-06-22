@@ -3,11 +3,12 @@ package surf
 import (
 	"bytes"
 	"fmt"
-	"github.com/headzoo/surf/jar"
-	"github.com/headzoo/ut"
 	"net/http"
 	"net/http/httptest"
 	"testing"
+
+	"github.com/headzoo/ut"
+	"github.com/seisuke/surf/jar"
 )
 
 func TestGet(t *testing.T) {
@@ -61,8 +62,8 @@ func TestPost(t *testing.T) {
 
 func TestHead(t *testing.T) {
 	ut.Run(t)
-	var r *http.Request;
-	
+	var r *http.Request
+
 	ts := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
 		r = req
 	}))

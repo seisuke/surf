@@ -14,8 +14,8 @@ import (
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/headzoo/surf/errors"
-	"github.com/headzoo/surf/jar"
+	"github.com/seisuke/surf/errors"
+	"github.com/seisuke/surf/jar"
 )
 
 // Attribute represents a Browser capability.
@@ -74,7 +74,7 @@ type Browsable interface {
 
 	// Open requests the given URL using the GET method.
 	Open(url string) error
-	
+
 	// Open requests the given URL using the HEAD method.
 	Head(url string) error
 
