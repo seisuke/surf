@@ -703,3 +703,7 @@ func isContentTypeHtml(res *http.Response) bool {
 	}
 	return false
 }
+
+func (bow *Browser) RowBody() []byte {
+	return bow.body
+}
